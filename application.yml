@@ -1,0 +1,21 @@
+proxy:
+  port: 8080
+  authentication: simple
+  admin-groups: admins
+  users:
+  - name: user
+    password: workhorse
+    groups: admins
+  docker:
+    internal-networking: true
+  specs:
+  - id: workHORSE
+    display-name: workHORSE
+    description: workHORSE application
+    container-image: chriskypri/workhorse-app
+    container-network: sp-example-net
+    container-cmd: ["R", "-e", "chooseCRANmirror(ind=1); \
+                 shiny::runApp('/workHORSE') "]
+logging:
+  file:
+    shinyproxy.log
