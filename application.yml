@@ -15,7 +15,7 @@ proxy:
     container-image: chriskypri/workhorse-app
     container-network: sp-example-net
     container-cmd: ["R", "-e", "chooseCRANmirror(ind=1); \
-                 shiny::runApp('/workHORSE') "]
+                 shiny::runApp('/root/workHORSE') "]
 logging:
   file:
     shinyproxy.log
