@@ -10,7 +10,7 @@ proxy: # see https://www.shinyproxy.io/configuration/ for options
   - id: workHORSE
     display-name: workHORSE
     description: workHORSE app
-    container-image: chriskypri/workhorse-app
+    container-image: chriskypri/workhorse-app:stable
     container-network: sp-workhorse-net
     container-volumes: ["/mnt/storage_fast/synthpop:/mnt/storage_fast/synthpop"]
     port: 9898
